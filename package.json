@@ -1,0 +1,65 @@
+{
+    "name": "angular-component-open-file-helper",
+    "displayName": "angular-component-open-file-helper",
+    "description": "this is a simple plugin to open template file or style file or component file",
+    "version": "0.0.1",
+    "publisher": "Jax2000",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.openComponentFile",
+        "onCommand:extension.openTemplateFile",
+        "onCommand:extension.openStyleFile"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "cmd+alt+t",
+                "command": "extension.openTemplateFile",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "cmd+alt+c",
+                "command": "extension.openComponentFile",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "cmd+alt+s",
+                "command": "extension.openStyleFile",
+                "when": "editorTextFocus"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.openTemplateFile",
+                "title": "open telplate file"
+            },
+            {
+                "command": "extension.openComponentFile",
+                "title": "open component file"
+            },
+            {
+                "command": "extension.openStyleFile",
+                "title": "open style file"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
