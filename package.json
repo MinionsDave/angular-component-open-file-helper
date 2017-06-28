@@ -3,7 +3,7 @@
     "displayName": "angular-component-open-file-helper",
     "description": "this is a simple plugin to open template file or style file or component file",
     "version": "0.0.1",
-    "publisher": "Jax2000",
+    "publisher": "MinionsDave",
     "engines": {
         "vscode": "^1.12.0"
     },
@@ -37,7 +37,7 @@
         "commands": [
             {
                 "command": "extension.openTemplateFile",
-                "title": "open telplate file"
+                "title": "open template file"
             },
             {
                 "command": "extension.openComponentFile",
